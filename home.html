@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>calculator</title>
+     
+  </head>
+<style>
+body{
+      background-image: url(images/back2.jpg)
+}
+.logo1 img{
+      margin-left: 25%;
+      width: 50%;
+      margin-bottom: 30px;
+      margin-top: -50px;
+      position: sticky;
+}
+.logo2 img{
+      margin-left: 25%;
+      width: 50%;
+      margin-top: -170px;
+      
+}  
+li{
+      inline-height:30px;
+      list-style: none;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      background: blue;
+}
+a{
+      text-decoration: none;
+      margin: 15px;
+      inline-height: 50px;
+      color: black;
+      font-size: 30px;
+      text-align: center;
+   
+}
+header{
+      font-size: 60px;
+      text-align: center;
+   
+}
+.slide{
+      display: none;
+      text-align: center;
+      font-size: 20px;
+      margin-left: -40px;
+      animation: bpm 1s linear, pulse 0.75s 1s linear infinite;
+}
+ }
+.slidebar{
+    
+      text-align: center;
+      margin-left: -40px;
+      font-size: 20px;
+}
+#show{
+      display: none;
+    font-size: 20px;
+      
+}
+</style>
+
+  <body>
+<div class="logo1">
+<img src="images/sulogo1.png">
+</div>
+<div class="logo2">
+<img src="images/slogo2.png">
+</div>
+
+    
+    <div class="slidebar">
+     <header id = "memo"> Menu </header>
+<ul id = "show">
+     <li id = "home"><a href="#"><i class="fas fa-trash"> GET STARTED</i></a></li>
+    <li> <a href="#"> ABOUT</a></li>
+    <li> <a href="#"> LOGIN</a></li>
+     <li><a href="dom.html"> REGISTER</a></li>
+</ul>
+    </div>
+<div id ="home2" class="slide">
+     
+<ul>
+     <li><a> buy</a></li>
+    <li> <a> sell</a></li>
+</ul>
+    </div>
+<script>
+ let x = document.getElementById("memo")
+ let y = document.getElementById("show")
+ let t = document.getElementById("home")
+ let c = document.getElementById("home2")
+x.onclick = function(){
+ if(y.style.display === "block"){
+  y.style.display = "none"
+}else{
+  y.style.display = "block"
+  c.style.display = "none"
+}
+}
+
+t.onclick = function(){
+ if(c.style.display === "block"){
+  c.style.display = "none"
+}else{
+  c.style.display = "block"
+  y.style.display = "none"
+}
+}
+
+
+</script>
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js>"</script>
+</body>
+</html>

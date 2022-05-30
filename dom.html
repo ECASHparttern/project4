@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>calculator</title>
+  </head>
+<style>
+body{
+      background-image: url(images/back2.jpg)
+}
+.logo1 img{
+      margin-left: 25%;
+      width: 50%;
+      margin-bottom: 30px;
+      margin-top: -50px
+}
+.logo2 img{
+      margin-left: 25%;
+      width: 50%;
+      margin-top: -170px;
+      display: auto;
+}
+.nav{
+      text-align: center;
+      color: #ffff;
+   
+      margin-top:-50px
+      display: flex;
+}
+.nav a{
+      background: #6ddd;
+      margin: 10px;
+      font-size: 20px;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+}  
+form{
+     text-align: center;
+     bottom: 0;
+     display: grid;
+     padding: 50px;
+}
+.container input{
+     padding: 15px;
+     margin: 14px;
+}
+h3{
+    text-align: center;
+    margin-bottom: -50px;
+    padding-top: 20px;
+}
+#file::-webkit-file-upload-button{
+    visibility: hidden;
+}
+#file{
+    width: 49%;
+    height: 49%;
+    border: solid;
+    justify-self: center;
+    text-align: center;
+}
+
+</style>
+
+  <body>
+<div class="logo1">
+<img src="images/sulogo1.png">
+</div>
+<div class="logo2">
+<img src="images/slogo2.png">
+</div>
+
+    
+    <div class="nav">
+     <a href="home.html"> HOME</a>
+     <a href="about.html"> ABOUT</a>
+     <a href="#"> LOGIN</a>
+     <a href="dom.html"> REGISTER</a>
+    </div>
+
+<div class="container">
+
+<h3> REGISTER </h3>
+
+<form>
+<input type="file" id = "file">
+
+<input type="text" id="password" placeholder="Enter Your Real Name" required>
+
+<input type="number" id="number" placeholder="Enter your phone number" required>
+
+
+<input type="password" id="password" placeholder="Enter Password" required>
+
+<input type="password" id="c-password" placeholder="Confirm your Password" required>
+
+<p id="message"></p>
+
+<input type="button" onclick ="checkPassword()" value="SUBMIT"/>
+
+<p> buy superstar products and feel at home</p>
+
+</form>
+
+</div>
+
+<script>
+
+function checkPassword() {
+
+var password = document.getElementById("password").value;
+
+var cPassword = document.getElementById("c-password").value;
+
+var message = document.getElementById("message");
+
+if (password == cPassword) {
+
+message.textContent = "Passwords Missmatch";
+
+message.style.backgroundColor = "green";
+
+} else {
+
+message.textContent = "Passwords don't Match";
+
+message.style.backgroundColor = "red";
+
+}
+
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>
